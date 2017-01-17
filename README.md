@@ -6,7 +6,7 @@ bibliography: RPiCitations.bib
 **SpeechBuddy**
 ===============
 
-Project website <https://gnadnivek.github.io/>
+Project website <https://willcodyanderson.github.io/>
 
 **Table of Contents**
 ---------------------
