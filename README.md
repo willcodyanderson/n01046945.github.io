@@ -1,6 +1,6 @@
 ---
-bibliography: "E:/ceng355/week1/final markdown/RPiCitations.bib"
 csl: "E:/ceng355/week1/final markdown/apa.csl"
+bibliography: "E:/ceng355/week1/final markdown/RPiCitations.bib"
 ---
 
 Software Requirements Specification
@@ -8,6 +8,9 @@ Software Requirements Specification
 
 Speech Buddy
 ------------
+
+[Speech Buddy
+Github](https://github.com/willcodyanderson/willcodyanderson.github.io)
 
 Version 1.0 approved
 
@@ -22,7 +25,7 @@ Table of Contents
 
 Table of Contents ii
 
-### 1. [Introduction 1](#introduction) 
+### 1. [Introduction 1](#introduction)
 
 1.1 [Proposal 1](#proposal)
 
@@ -32,7 +35,7 @@ Table of Contents ii
 
 1.4 [Methodology 2](#methodology)
 
-1.5[ Concluding Remarks 7](#concluding-remarks)
+1.5[Concluding Remarks 7](#concluding-remarks)
 
 ### 2. [Database Specifications 8](#database-specifications)
 
@@ -61,7 +64,7 @@ Table of Contents ii
 
 4.2 [Firebase Hosting 15](#firebase-hosting)
 
-5. [References 15](#reference)
+1.  [References 15](#reference)
 
 Introduction
 ============
