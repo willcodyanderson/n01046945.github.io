@@ -9,8 +9,7 @@ Software Requirements Specification
 Speech Buddy
 ------------
 
-[Speech Buddy
-Github](https://github.com/willcodyanderson/willcodyanderson.github.io)
+[Speech Buddy Github](https://willcodyanderson.github.io/)
 
 Version 1.0 approved
 
@@ -44,17 +43,15 @@ Table of Contents ii
 2.2 [Database Tables 8](#database-tables)
 
 2.3 [Database Alteration via User Case Example
-8](#database-alteration-via-user-ease-example)
-
-2.4 [Database Work Contributions 9](#database-work-contributions)
+8](#database-alteration-via-user-case-examples)
 
 ### 3. [Mobile Application Specifications 9](#mobile-application-specifications)
 
-3.1 [GUI Specifications 9](#gUI-specifications)
+3.1[ GUI Specifications 9](#graphical-user-interface-specifications)
 
 3.2 [Database Integration 10](#database-integration)
 
-3.3 [Sample User Cases 10](#sample-user-cases)
+3.3 [Sample User Cases 10](#user-cases)
 
 3.4 [Application Work Contributions 10](#application-work-contributions)
 
@@ -62,9 +59,9 @@ Table of Contents ii
 
 4.1 [Amazon Voice Services 15](#amazon-voice-services)
 
-4.2 [Firebase Hosting 15](#firebase-hosting)
+4.2 [Firebase Hosting 15](#firebase-database)
 
-1.  [References 15](#reference)
+5 [References 15](#references)
 
 Introduction
 ============
@@ -311,8 +308,8 @@ in a new row under the ListNames table.
 Mobile Application Specifications
 =================================
 
-Graphical User Interface Specifications: Activities
----------------------------------------------------
+Graphical User Interface Specifications
+---------------------------------------
 
 **Login Activity:** The login screen of the application is the first presented
 upon launching the application. The user may enter already existing credentials
