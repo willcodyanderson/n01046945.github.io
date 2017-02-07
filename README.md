@@ -1,76 +1,61 @@
 ---
-csl: "E:/ceng355/week1/final markdown/apa.csl"
-bibliography: "E:/ceng355/week1/final markdown/RPiCitations.bib"
+csl: ../week1/final markdown/apa.csl
+bibliography: ../week1/final markdown/RPiCitations.bib
+title: "Software Requirements Specification: Speech Buddy"
+author: "William Anderson, Kevin Dang, Sanjay Jerad"
 ---
+
+\pagebreak
 
 Software Requirements Specification
 ===================================
 
 Speech Buddy
-------------
+============
 
 [Speech Buddy Github](https://willcodyanderson.github.io/)
 
 Version 1.0 approved
 
-Prepared by William
+Prepared by William, Kevin, Sanjay
 
 The Arrested Developers
 
 January 17, 2017
 
-Table of Contents
------------------
+Declaration of Joint Authorship
+===============================
 
-Table of Contents ii
+We, William Anderson, Kevin Dang and Sanjay Jerad, confirm that this work
+submitted for assessment is our own and is expressed in our own words.
 
-### 1. [Introduction 1](#introduction)
+William holds scrum master position. In charge of development at the back-end of
+the SpeechBuddy project.
 
-1.1 [Proposal 1](#proposal)
+Sanjay created the graphical user interface for the android application.
 
-1.2 [Executive Summary 1](#executive-summary)
+Kevin in charge of data storage for the project. Data stored in an external
+database.
 
-1.3 [Background 1](#background)
+Any uses made within it of the works of any other author, in any form (ideas,
+equations, figures, texts, tables, programs), are properly acknowledged at the
+point of use. A list of the references used is included.
 
-1.4 [Methodology 2](#methodology)
-
-1.5[Concluding Remarks 7](#concluding-remarks)
-
-### 2. [Database Specifications 8](#database-specifications)
-
-2.1 [Database Type 8](#database-type)
-
-2.2 [Database Tables 8](#database-tables)
-
-2.3 [Database Alteration via User Case Example
-8](#database-alteration-via-user-case-examples)
-
-### 3. [Mobile Application Specifications 9](#mobile-application-specifications)
-
-3.1[ GUI Specifications 9](#graphical-user-interface-specifications)
-
-3.2 [Database Integration 10](#database-integration)
-
-3.3 [Sample User Cases 10](#user-cases)
-
-3.4 [Application Work Contributions 10](#application-work-contributions)
-
-### 4. [Additional Web Specifications 15](#additional-web-specifications)
-
-4.1 [Amazon Voice Services 15](#amazon-voice-services)
-
-4.2 [Firebase Hosting 15](#firebase-database)
-
-5 [References 15](#references)
-
-Introduction
-============
+It is mandatory that all sources of information be acknowledged in the SRS.
+Plagiarism is unethical and a candidate suspected of plagiarizing may be
+referred to the Complaints Committee.
 
 Proposal
---------
+========
+
+Summary
+-------
 
 An intelligent voice interface that is able to listen and interpret what the
 user has spoken. Input will be translated into text and stored in a Database.
+
+Problem
+-------
 
 The problem this project solves is that it helps users take simple notes, such
 as a grocery list or small reminders for when you don’t have a pen and paper
@@ -80,8 +65,8 @@ text format.
 
 Similar to Apples Siri and Microsoft’s Cortana.
 
-Executive Summary
------------------
+Description
+-----------
 
 As students in the Computer Engineering Technology program, we will be
 integrating the knowledge and skills we have learned from our program into this
@@ -99,8 +84,89 @@ Techniques independently and the application will be completed in CENG 319
 Software Project. These will be integrated together in the subsequent term in
 CENG 355 Computer Systems Project.
 
-Background
-----------
+Abstract
+========
+
+This report contents information specifying a Voice interface build project.
+This project hopes to create a fully functioning Voice interface that will
+complete simple tasks given to it via speech detect. Similar to Apples Siri and
+Microsoft’s Cortana. Information in regards to the build material and cost of
+this project are listed in this report. Material such as a raspberry Pi, USB
+microphone and mini speakers were used, in total the SpeechBuddy project’s
+estimated cost is \$230. SpeechBuddy will help people with better planning and
+organization, letting them set info about important details. This project will
+roughly take up to 8 months to complete. Data is stored in an external database
+hosted on Firebase. The android application is a simply structure that displays
+the list the user created via voice input.
+
+Table of Contents
+=================
+
+### 1. [Declaration of Sole Authorship](#declaration-of-joint-authorship)
+
+### 2. [Proposal](#proposal)
+
+2.1 [Summary](#summary)
+
+2.2 [Problem](#problem)
+
+2.3 [Description](#description)
+
+### 3. [Abstract](#abstract)
+
+### 4. [Table of Contents](#table-of-contents)
+
+### 5. [Illustrations and Diagrams](#illustrations-and-diagrams)
+
+### 6. [Introduction](#introduction)
+
+6.1 [Technical Problem](#technical-problem)
+
+6.2 [Objective](#objective)
+
+### 7. [Project Description](#project-description)
+
+7.0.1 [Methodology/Schedule](#methodology-and-schedule)
+
+7.0.2 [Concluding Remarks](#concluding-remarks)
+
+### 7.1 [Database Specifications](#database-specifications)
+
+7.1.1 [Database Type](#database-type)
+
+7.1.2 [Database Tables](#database-tables)
+
+7.1.3 [Database Alteration via User Case
+Example](#database-alteration-via-user-case-examples)
+
+### 7.2. [Mobile Application Specifications](#mobile-application-specifications)
+
+7.2.1 [GUI Specifications](#graphical-user-interface-specifications)
+
+7.2.2 [Database Integration](#database-integration)
+
+7.2.3 [Sample User Cases](#user-cases)
+
+7.2.4 [Application Work Contributions](#application-work-contributions)
+
+### 7.3. [Additional Web Specifications](#additional-web-specifications)
+
+7.3.1 [Amazon Voice Services](#amazon-voice-services)
+
+7.3.2 [Firebase Hosting](#firebase-database)
+
+### 8. [Conclusion](#conclusion)
+
+### 9. [References](#references)
+
+Illustrations and Diagrams
+==========================
+
+Introduction
+============
+
+Technical Problem
+-----------------
 
 The problem solved by this project is that it helps users take simple notes,
 such as a grocery list or small reminders for when you don’t have a pen and
@@ -150,12 +216,22 @@ following topics from the respective relevant courses:
 This knowledge and skill set will enable me to build the subsystems and
 integrate them together as my capstone project.
 
-Methodology
------------
+Objective
+---------
 
-This proposal is assigned in the first week of class and is due at the beginning
-of class in the second week of the fall semester. My coursework will focus on
-the first two of the 3 phases of this project:  
+The objective of this project is to create a usable voice interface that will
+help people with organization and planning. In this current age of time a mobile
+phone is carried everywhere and used 24/7. We want to utilize this aspect to
+create a unique interface with a virtual voice to help others in planning. If a
+piece of technology is with people the majority of the time, why not use that
+technology in an effort to help them.
+
+Project Description
+===================
+
+Methodology and Schedule
+------------------------
+
 Phase 1 Hardware build.  
 Phase 2 System integration.  
 Phase 3 Demonstration to future employers.
@@ -170,7 +246,7 @@ as high as 45 VDC can be obtained. Maximum power consumption will be 20 Watts.
 
 *Phase 2 System integration*
 
-The system integration will be completed in the fall term.
+The system integration will be completed in the Winter term.
 
 *Phase 3 Demonstration to future employers*
 
@@ -233,7 +309,7 @@ important to start tasks as soon as possible to be able to meet deadlines.
 | Materials to improve functionality, fit, and finish of project.                                                                                                                                                                                                                                                                       | N/A              |                                                                                                                                |
 | **Phase 2 Total**                                                                                                                                                                                                                                                                                                                     | **TBD**          |                                                                                                                                |
 | **Phase 3**                                                                                                                                                                                                                                                                                                                           |                  |                                                                                                                                |
-| Off campus colocation                                                                                                                                                                                                                                                                                                                 | \<\\\$100.00     | An example: [4].                                                                                                               |
+| Off campus colocation                                                                                                                                                                                                                                                                                                                 | \<\\\$100.00     |                                                                                                                                |
 | *Shipping*                                                                                                                                                                                                                                                                                                                            | *TBD*            |                                                                                                                                |
 | *Tax*                                                                                                                                                                                                                                                                                                                                 | *TBD*            |                                                                                                                                |
 | *Duty*                                                                                                                                                                                                                                                                                                                                | *TBD*            |                                                                                                                                |
@@ -248,21 +324,17 @@ integrate the knowledge and skills developed in our program to create a
 collaborative IoT capstone project demonstrating my ability to learn how to
 support projects. I request approval of this project.
 
- 
-
 Database Specifications
-=======================
+-----------------------
 
-Database Type
--------------
+### Database Type
 
 Firebase is the Database type that is used for Speech Buddy. Firebase is a JSON
 style Database that is organized via encrypted keys. It is incorporated directly
 in android studio for ease of use with mobile applications wanting to store data
 online.
 
-Database Tables
----------------
+### Database Tables
 
 There are three tables that are used in the Firebase.
 
@@ -283,8 +355,7 @@ them via an identification key within the table.
 Item is unique to the list name it was created under and the user that created
 it via an identification key within the table.
 
-Database Alteration via User Case Examples
-------------------------------------------
+### Database Alteration via User Case Examples
 
 User case: The User Adds a list named “groceries” to their speech buddy.
 
@@ -306,10 +377,9 @@ Consequences: a string element “rice” and key unique to the user are generat
 in a new row under the ListNames table.
 
 Mobile Application Specifications
-=================================
+---------------------------------
 
-Graphical User Interface Specifications
----------------------------------------
+### Graphical User Interface Specifications
 
 **Login Activity:** The login screen of the application is the first presented
 upon launching the application. The user may enter already existing credentials
@@ -347,8 +417,7 @@ an option to clear all data from the current users records to start anew.
 **Additional Note:** For ease of use, users may also press and hold list/item
 elements to delete them. Any deleted list will also delete it’s child items.
 
-Database Integration
---------------------
+### Database Integration
 
 The Speech Buddy Application uses the integrated Firebase libraries in Android
 Studio to connect to the database. Once connected online, it actively retrieves
@@ -357,8 +426,7 @@ All new elements added to the users lists and items are independently added to
 the database as soon as they are entered for optimal up to date accuracy within
 the database.
 
-User Cases
-----------
+### User Cases
 
 | Test case: 1                                                                                                                                                           |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -538,38 +606,39 @@ User Cases
 
 2.  Click one of them and enter an item
 
-Application Work Contributions
-------------------------------
+### Application Work Contributions
 
 **William:** The acting scrum master of the project. William is in charge of
-back-end development including Java and using libraries and API’s. He controls
+back-end development including Java and using libraries and API’s. He manages
 the overall architecture and functionality of the project.
 
 **Sanjay:** In charge of the Graphical User Interface and User experience.
-Designs layouts and recommends functionality to William to be implemented.
+Different Graphical interfaces for both mobile phones and tablets. Designs
+layouts and recommends functionality to William to be implemented.
 
 **Kevin:** In charge of data storage, manipulation and maintenance. Created the
 Firebase database, as well as its internal structure and breakdown to be
 connected to via Firebase Java libraries.
 
 Additional Web Specifications
-=============================
+-----------------------------
 
-Amazon Voice Services
----------------------
+### Amazon Voice Services
 
 The Speech Buddy Hardware utilizes Amazon Voice Libraries for voice input to be
 added to the database. In addition to the JavaScript classes built for Speech
 Buddy, Amazon Voice Services offers basic user searches via an online search
-engine and can answer simple questions. These library abilities are not
-implemented in Speech Buddy’s Functionality.
+engine and can answer simple questions. Use of Amazon Alexa “skill” creation to
+make use of the libraries to connect to the external Firebase database.
 
-Firebase Database
------------------
+### Firebase Database
 
 The Speech Buddy Hardware and application will be utilizing Firebase databases
 for data storage. The service offers free (to a certain amount of traffic) data
 hosting and an appropriate size and speed for Speech Buddy’s Requirements.
+
+Conclusion
+==========
 
 References
 ==========
