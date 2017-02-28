@@ -1,27 +1,16 @@
 ---
-csl: ../week1/final markdown/apa.csl
-bibliography: ../week1/final markdown/RPiCitations.bib
-title: "Software Requirements Specification: Speech Buddy"
+csl: apa.csl
+bibliography: RPiCitations.bib
+title: "Technical Report: Speech Buddy"
 author: "William Anderson, Kevin Dang, Sanjay Jerad"
 ---
 
 \pagebreak
 
-Software Requirements Specification
-===================================
-
-Speech Buddy
-============
+Speech Buddy Project
+====================
 
 [Speech Buddy Github](https://willcodyanderson.github.io/)
-
-Version 1.0 approved
-
-Prepared by William, Kevin, Sanjay
-
-The Arrested Developers
-
-January 17, 2017
 
 Declaration of Joint Authorship
 ===============================
@@ -37,13 +26,18 @@ Sanjay created the graphical user interface for the android application.
 Kevin in charge of data storage for the project. Data stored in an external
 database.
 
+Our team “Arrested Developers” agree that the Speech Buddy project is a group
+involvement, using every member’s own ideas and knowledge throughout the entire
+duration of the build.
+
 Any uses made within it of the works of any other author, in any form (ideas,
 equations, figures, texts, tables, programs), are properly acknowledged at the
-point of use. A list of the references used is included.
+point of use. Any outside knowledge we used for the creation of the project,
+will be cited down in the references at the bottom of the TR. We acknowledge any
+work used that does not belong to us and respect their proper ownership.
 
-It is mandatory that all sources of information be acknowledged in the SRS.
-Plagiarism is unethical and a candidate suspected of plagiarizing may be
-referred to the Complaints Committee.
+It is mandatory that all sources of information be acknowledged in the TR.
+Plagiarism is unethical, irresponsible and criminal.
 
 Proposal
 ========
@@ -84,95 +78,8 @@ Techniques independently and the application will be completed in CENG 319
 Software Project. These will be integrated together in the subsequent term in
 CENG 355 Computer Systems Project.
 
-Abstract
-========
-
-This report contents information specifying a Voice interface build project.
-This project hopes to create a fully functioning Voice interface that will
-complete simple tasks given to it via speech detect. Similar to Apples Siri and
-Microsoft’s Cortana. Information in regards to the build material and cost of
-this project are listed in this report. Material such as a raspberry Pi, USB
-microphone and mini speakers were used, in total the SpeechBuddy project’s
-estimated cost is \$230. SpeechBuddy will help people with better planning and
-organization, letting them set info about important details. This project will
-roughly take up to 8 months to complete. Data is stored in an external database
-hosted on Firebase. The android application is a simply structure that displays
-the list the user created via voice input.
-
-Table of Contents
-=================
-
-### 1. [Declaration of Sole Authorship](#declaration-of-joint-authorship)
-
-### 2. [Proposal](#proposal)
-
-2.1 [Summary](#summary)
-
-2.2 [Problem](#problem)
-
-2.3 [Description](#description)
-
-### 3. [Abstract](#abstract)
-
-### 4. [Table of Contents](#table-of-contents)
-
-### 5. [Illustrations and Diagrams](#illustrations-and-diagrams)
-
-### 6. [Introduction](#introduction)
-
-6.1 [Technical Problem](#technical-problem)
-
-6.2 [Objective](#objective)
-
-### 7. [Project Description](#project-description)
-
-7.0.1 [Methodology/Schedule](#methodology-and-schedule)
-
-7.0.2 [Concluding Remarks](#concluding-remarks)
-
-### 7.1 [Database Specifications](#database-specifications)
-
-7.1.1 [Database Type](#database-type)
-
-7.1.2 [Database Tables](#database-tables)
-
-7.1.3 [Database Alteration via User Case
-Example](#database-alteration-via-user-case-examples)
-
-### 7.2. [Mobile Application Specifications](#mobile-application-specifications)
-
-7.2.1 [GUI Specifications](#graphical-user-interface-specifications)
-
-7.2.2 [Database Integration](#database-integration)
-
-7.2.3 [Sample User Cases](#user-cases)
-
-7.2.4 [Application Work Contributions](#application-work-contributions)
-
-### 7.3. [Additional Web Specifications](#additional-web-specifications)
-
-7.3.1 [Amazon Voice Services](#amazon-voice-services)
-
-7.3.2 [Firebase Hosting](#firebase-database)
-
-### 8. [Conclusion](#conclusion)
-
-### 9. [References](#references)
-
-Illustrations and Diagrams
-==========================
-
-Introduction
-============
-
-Technical Problem
------------------
-
-The problem solved by this project is that it helps users take simple notes,
-such as a grocery list or small reminders for when you don’t have a pen and
-paper available. This project will help solved problems where people forget an
-important detail or appointment, by storing what the user says into a readable
-text format.
+Background
+----------
 
 There are several applications and hardware out there that utilize speech as
 input, such as Apple’s Siri, Microsoft’s Cortana or Amazon’s Alexa. Some other
@@ -183,8 +90,8 @@ as input, and has not been a part a person’s daily lives. You don’t see peop
 talking to their phone or microphone everywhere you look.
 
 We have searched for prior art via Humber’s IEEE subscription selecting “My
-Subscribed Content” and have found and read [@6894583] which provides insight
-into similar efforts.
+Subscribed Content” and have found and read the below articles, which provides
+insight into similar efforts.
 
 The first article contains information related to text-to-speech output in
 technology. [@5174430]
@@ -213,21 +120,8 @@ following topics from the respective relevant courses:
 
 -   Wireless protocols such as 802.11 from TECH152 Telecom Networks.
 
-This knowledge and skill set will enable me to build the subsystems and
+This knowledge and skill set will enable us to build the subsystems and
 integrate them together as my capstone project.
-
-Objective
----------
-
-The objective of this project is to create a usable voice interface that will
-help people with organization and planning. In this current age of time a mobile
-phone is carried everywhere and used 24/7. We want to utilize this aspect to
-create a unique interface with a virtual voice to help others in planning. If a
-piece of technology is with people the majority of the time, why not use that
-technology in an effort to help them.
-
-Project Description
-===================
 
 Methodology and Schedule
 ------------------------
@@ -323,6 +217,120 @@ and helps people set reminders of important details. This is an opportunity to
 integrate the knowledge and skills developed in our program to create a
 collaborative IoT capstone project demonstrating my ability to learn how to
 support projects. I request approval of this project.
+
+Abstract
+========
+
+This report contents information specifying a Voice interface build project.
+This project hopes to create a fully functioning Voice interface that will
+complete simple tasks given to it via speech detect. Similar to Apples Siri and
+Microsoft’s Cortana. Information in regards to the build material and cost of
+this project are listed in this report. Material such as a raspberry Pi, USB
+microphone and mini speakers were used, in total the SpeechBuddy project’s
+estimated cost is \$230. SpeechBuddy will help people with better planning and
+organization, letting them set info about important details. This project will
+roughly take up to 8 months to complete. Data is stored in an external database
+hosted on Firebase. The android application is a simply structure that displays
+the list the user created via voice input.
+
+Table of Contents
+=================
+
+### 1. [Declaration of Sole Authorship](#declaration-of-joint-authorship)
+
+### 2. [Proposal](#proposal)
+
+2.1 [Summary](#summary)
+
+2.2 [Problem](#problem)
+
+2.3 [Description](#description)
+
+2.4 [Background](#background)
+
+2.5 [Methodology/Schedule](#methodology-and-schedule)
+
+2.6 [Concluding Remarks](#concluding-remarks)
+
+### 3. [Abstract](#abstract)
+
+### 4. [Table of Contents](#table-of-contents)
+
+### 5. [Illustrations and Diagrams](#illustrations-and-diagrams)
+
+### 6. [Introduction](#introduction)
+
+6.1 [Objective](#objective)
+
+6.2 [Technical Problem](#technical-problem)
+
+### 7. [Project Description](#project-description)
+
+### 7.1 [Database Specifications](#database-specifications)
+
+7.1.1 [Database Type](#database-type)
+
+7.1.2 [Database Tables](#database-tables)
+
+7.1.3 [Database Alteration via User Case
+Example](#database-alteration-via-user-case-examples)
+
+### 7.2. [Mobile Application Specifications](#mobile-application-specifications)
+
+7.2.1 [GUI Specifications](#graphical-user-interface-specifications)
+
+7.2.2 [Database Integration](#database-integration)
+
+7.2.3 [Sample User Cases](#user-cases)
+
+7.2.4 [Application Work Contributions](#application-work-contributions)
+
+### 7.3. [Additional Web Specifications](#additional-web-specifications)
+
+7.3.1 [Amazon Voice Services](#amazon-voice-services)
+
+7.3.2 [Firebase Hosting](#firebase-database)
+
+### 8. [Conclusion](#conclusion)
+
+### 9. [References](#references)
+
+Illustrations and Diagrams
+==========================
+
+Introduction
+============
+
+Objective
+---------
+
+The objective of this project is to create a usable voice interface that will
+help people with organization and planning. In this current age of time a mobile
+phone is carried everywhere and used 24/7. We want to utilize this aspect to
+create a unique interface with a virtual voice to help others in planning. If a
+piece of technology is with people the majority of the time, why not use that
+technology in an effort to help them.
+
+Technical Problem
+-----------------
+
+The problem solved by this project is that it helps users take simple notes,
+such as a grocery list or small reminders for when you don’t have a pen and
+paper available. This project will help solved problems where people forget an
+important detail or appointment, by storing what the user says into a readable
+text format.
+
+Some problems that were encountered in constructing the Speech Buddy, was trying
+to convert spoken words into text on the Raspberry Pi. We tackled this problem
+by first utilizing the “espeak” library on the Pi. This did not provide enough
+efficiency, until we discovered Amazon’s Alexa voice service. This voice service
+allowed us to create specific tasks for the voice to do, making it easier to
+program speech conversion, and database storage. Another problem was
+connectivity, the Alexa voice service requires internet access, we have a wired
+connection using an Ethernet cable. Portability is a big issue.
+
+Project Description
+===================
 
 Database Specifications
 -----------------------
