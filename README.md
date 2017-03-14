@@ -12,6 +12,8 @@ Speech Buddy Project
 
 [Speech Buddy Github](https://willcodyanderson.github.io/)
 
+January 3rd, 2017
+
 Declaration of Joint Authorship
 ===============================
 
@@ -293,7 +295,7 @@ Example](#database-alteration-via-user-case-examples)
 
 ### 7.4 [Build Instructions](#build-instructions)
 
-7.4.1 [Intro](#intro)
+7.4.1 [Build Introduction](#build-introduction)
 
 7.4.2 [Build Time](#build-time)
 
@@ -301,7 +303,11 @@ Example](#database-alteration-via-user-case-examples)
 
 7.4.4 [Software Setup](#software-setup)
 
-7.4.5 [Power Up and Testing](#power-up-and-testing)
+7.4.5 [Alexa Skill with Lambda](#alexa-skill-with-lamdba)
+
+7.4.6 [Database Setup](#database-setup)
+
+7.4.7 [Power Up and Testing](#power-up-and-testing)
 
 ### 8. [Conclusion](#conclusion)
 
@@ -343,9 +349,6 @@ connection using an Ethernet cable. Portability is a big issue.
 
 Project Description
 ===================
-
-Build Instructions
-------------------
 
 Database Specifications
 -----------------------
@@ -663,7 +666,7 @@ hosting and an appropriate size and speed for Speech Buddy’s Requirements.
 Build Instructions
 ==================
 
-### Intro
+### Build Introduction
 
 Speech Buddy is a voice interface intended to make storage and manipulation of
 data easier, as well as perform simple various tasks via voice commands. It is
@@ -684,9 +687,12 @@ about four to five hours, assuming parts delivery time is not included.
 
 Setup your raspberry Pi by following the build instruction included in your kit.
 Connect your external speaker into the pi's 3.5 mm jack and the USB microphone
-into a USB 2.0 slot. Use acrylic cement to bond case together. If you intent to
-put Speech Buddy permanently in it's case, it is important to wire the power
-cord through the designated power slot in the case before sealing the box.
+into a USB 2.0 slot. Use acrylic cement to bond case together. The file for the
+case design can be found on the Speech Buddy website
+[here](https://github.com/willcodyanderson/willcodyanderson.github.io), the
+laser cut design is called “casemodel(10).json”. If you intent to put Speech
+Buddy permanently in it's case, it is important to wire the power cord through
+the designated power slot in the case before sealing the box.
 
 ### Software Setup
 
@@ -700,9 +706,9 @@ guide provided here:
 
 [Amazon Voice Setup
 (](https://github.com/alexa/alexa-avs-sample-app/wiki/Raspberry-Pi#lets-get-started)Do
-Not install the wake word activation).
+Not install the wake word activation). why?
 
-To summarize the Amazon Voice Setup:
+Base on the AVS link provided, the set is as follows:
 
 First login to your amazon developer account and go to “Alexa”. Create a
 security profile and register a product, when completed this will create a
@@ -712,7 +718,7 @@ Security profile. Enter “https://localhost:3000” for the Allowed Origins, an
 “https://localhost:3000/authresponse” for the Allowed Return URLs, under “web
 settings”.
 
-On the Raspberry Pi clone the AVS:
+On the Raspberry Pi, clone the AVS:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 git clone https://github.com/alexa/alexa-avs-sample-app.git
@@ -722,6 +728,89 @@ Navigate the directory created, and edit the “automated\_install.sh” and add
 ProductID, ClientID, and ClientSecret you got when creating the security
 profile, to the file. Run this file to install AVS on the Pi, this will roughly
 take 30 minutes to install AVS.
+
+### Alexa Skill with Lamdba
+
+Login to Amazon Web Services (AWS) and go the the console, and search for
+“Lambda”. This service will allow use to create a skill for our Alexa. When in
+the Lambda page go ahead and create a Lambda function. For the blueprint, click
+on a blank function. Click on the broken box on the screen and select “Alexa
+Skills Kit” after hit next. Enter the name and description you want to use, they
+are not important. Select “Python 2.7” for the Runtime, this is the coding
+language that the Alexa skill will be using. The actual code of the Speech Buddy
+skill will be location on our website
+[here](https://github.com/willcodyanderson/willcodyanderson.github.io), copy the
+code into the “Lambda function code” section. Moving onto the next portion is
+setting up the hander and role. Leave the Handler name as is, and choose “Create
+a custom role” for the Role. This will open up a new tab, select “Create a new
+IAM Role” for IAM Role and enter a name for it, there is further setup for this
+but that will be discussed later. After this click allow on the bottom right,
+this will take you back to configuring the function. Skip the Advanced settings
+and hit next, hit Create Function.
+
+Take note of the ARN on the top right when you finished creating the function.
+this is important for later so remember it. There you go you have created an
+Alexa skill for the Speech Buddy, but you are not done yet. You have created the
+skill, but still need to connect to the actual Alexa itself.
+
+ 
+
+To connect the Alexa Skill:
+
+Login to your Amazon developer account and click on ALEXA tab. Click “Alexa
+Skills Kit”, you will see a button on the top right, “Add a New Skill” click
+that. Leave everything as it is and just enter a Name and Invocation Name for
+the skill. For the interaction Model the Intent Schema and Sample Utterances can
+be found on our website
+[here](https://github.com/willcodyanderson/willcodyanderson.github.io), copy
+them into the Models. Now the important part, in the Configuration, check the
+“AWS Lambda ARN”, after check “North America”. Enter the ARN code that was
+generated when creating the Lambda function.
+
+It is complete now you have connected the Lambda Skill to the Alexa.
+
+ 
+
+As discussed before there is further setup required for the IAM Role. To do this
+go to the console page on your AWS account, and search for “IAM”. When in the
+IAM page click the “Roles” tab on the left hand side. Select the Role you are
+using for the Lambda function after selecting, click on the button “Attach
+Policy”. Find the “AmazonDynamoDBFullAccess” and add this Policy to the Role.
+This Policy will allow for the Lamdba function to access another AWS service,
+DynamoDB, we will be using this service to store information on a database. The
+setup for the database will be discussed later in the Build Insrtuctions.
+
+### Database Setup
+
+To set up the database for the Alexa skill use this link, [database
+setup](https://hackernoon.com/my-first-alexa-custom-skill-6a198d385c84#.equf3csqc).
+The link is tailored to the owners own project, so using this as a reference
+guide you can setup the database for your own specifications. Setup is as
+follows:
+
+The Speech Buddy uses an online database hosted by Amazon Web Services (AWS),
+called DynamoDB. To use this service you will be required to have a AWS account.
+When you login into your AWS account make sure your location on the top right is
+“North Virginia”, if it is not, change it to this. Some services on the AWS are
+only available in this area. Go to the console page and search for “DynamoDB”.
+
+When you are in the DynamoDB page click on the “Create table” button. Enter the
+name of the table you would like to use, in our case “ListNames”, and enter a
+primary key. The primary key will be the first column of the table, enter
+“NameId”.
+
+After entering the information for table name and primary key click “create” on
+the bottom right. Give some time for the table to create, and you are done.
+
+To connect the Alexa skill to the DynamoDB database you will need to enter the
+following code into the lambda function:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+import boto3
+
+dynamodb = boto3.resource('dynamodb')
+table = dynamodb.Table('table_name_here')
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ### Power Up and Testing
 
