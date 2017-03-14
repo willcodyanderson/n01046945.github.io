@@ -5,14 +5,14 @@ title: "Technical Report: Speech Buddy"
 author: "William Anderson, Kevin Dang, Sanjay Jerad"
 ---
 
+March 28th, 2017
+
 \pagebreak
 
 Speech Buddy Project
 ====================
 
 [Speech Buddy Github](https://willcodyanderson.github.io/)
-
-January 3rd, 2017
 
 Declaration of Joint Authorship
 ===============================
