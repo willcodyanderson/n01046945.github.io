@@ -41,6 +41,8 @@ work used that does not belong to us and respect their proper ownership.
 It is mandatory that all sources of information be acknowledged in the TR.
 Plagiarism is unethical, irresponsible and criminal.
 
+\pagebreak
+
 Proposal
 ========
 
@@ -200,7 +202,8 @@ important to start tasks as soon as possible to be able to meet deadlines.
 | Speaker                                                                                                                                                                                                                                                                                                                               | \\\$28.99        |                                                                                                                                |
 | CENG Parts Kit                                                                                                                                                                                                                                                                                                                        | \\\$110.00       |                                                                                                                                |
 | J206 Parts                                                                                                                                                                                                                                                                                                                            | \\\$40.00        |                                                                                                                                |
-| **Phase 1 Total**                                                                                                                                                                                                                                                                                                                     | **\>\\\$318.99** |                                                                                                                                |
+| Project Case                                                                                                                                                                                                                                                                                                                          | \\\$13.00        |                                                                                                                                |
+| **Phase 1 Total**                                                                                                                                                                                                                                                                                                                     | **\>\\\$331.99** |                                                                                                                                |
 | **Phase 2**                                                                                                                                                                                                                                                                                                                           |                  |                                                                                                                                |
 | Materials to improve functionality, fit, and finish of project.                                                                                                                                                                                                                                                                       | N/A              |                                                                                                                                |
 | **Phase 2 Total**                                                                                                                                                                                                                                                                                                                     | **TBD**          |                                                                                                                                |
@@ -220,6 +223,8 @@ integrate the knowledge and skills developed in our program to create a
 collaborative IoT capstone project demonstrating my ability to learn how to
 support projects. I request approval of this project.
 
+\pagebreak
+
 Abstract
 ========
 
@@ -234,6 +239,8 @@ organization, letting them set info about important details. This project will
 roughly take up to 8 months to complete. Data is stored in an external database
 hosted on Firebase. The android application is a simply structure that displays
 the list the user created via voice input.
+
+\pagebreak
 
 Table of Contents
 =================
@@ -309,12 +316,28 @@ Example](#database-alteration-via-user-case-examples)
 
 7.4.7 [Power Up and Testing](#power-up-and-testing)
 
+7.4.8 [Colour Tutorial Setup](#colour-tutorial-setup)
+
 ### 8. [Conclusion](#conclusion)
 
 ### 9. [References](#references)
 
+\pagebreak
+
 Illustrations and Diagrams
 ==========================
+
+![](speechbuddy.jpg)
+
+The casing of the Speech Buddy, laser cut design can be found on our project
+website.
+
+![](SpeechBuddySystemDiagram.PNG)
+
+System diagram of the project, describing general structure of how Speech Buddy
+works.
+
+\pagebreak
 
 Introduction
 ============
@@ -346,6 +369,8 @@ allowed us to create specific tasks for the voice to do, making it easier to
 program speech conversion, and database storage. Another problem was
 connectivity, the Alexa voice service requires internet access, we have a wired
 connection using an Ethernet cable. Portability is a big issue.
+
+\pagebreak
 
 Project Description
 ===================
@@ -708,7 +733,7 @@ guide provided here:
 (](https://github.com/alexa/alexa-avs-sample-app/wiki/Raspberry-Pi#lets-get-started)Do
 Not install the wake word activation). why?
 
-Base on the AVS link provided, the set is as follows:
+Base on the AVS link provided, the setup is as follows:
 
 First login to your amazon developer account and go to “Alexa”. Create a
 security profile and register a product, when completed this will create a
@@ -738,15 +763,15 @@ on a blank function. Click on the broken box on the screen and select “Alexa
 Skills Kit” after hit next. Enter the name and description you want to use, they
 are not important. Select “Python 2.7” for the Runtime, this is the coding
 language that the Alexa skill will be using. The actual code of the Speech Buddy
-skill will be location on our website
+skill will be located on our website
 [here](https://github.com/willcodyanderson/willcodyanderson.github.io), copy the
 code into the “Lambda function code” section. Moving onto the next portion is
-setting up the hander and role. Leave the Handler name as is, and choose “Create
-a custom role” for the Role. This will open up a new tab, select “Create a new
-IAM Role” for IAM Role and enter a name for it, there is further setup for this
-but that will be discussed later. After this click allow on the bottom right,
-this will take you back to configuring the function. Skip the Advanced settings
-and hit next, hit Create Function.
+setting up the handler and role. Leave the Handler name as is, and choose
+“Create a custom role” for the Role. This will open up a new tab, select “Create
+a new IAM Role” for IAM Role and enter a name for it, there is further setup for
+this but that will be discussed later. After this click allow on the bottom
+right, this will take you back to configuring the function. Skip the Advanced
+settings and hit next, hit Create Function.
 
 Take note of the ARN on the top right when you finished creating the function.
 this is important for later so remember it. There you go you have created an
@@ -839,8 +864,23 @@ such as simple mathematics, google queries, and time and weather updates. Speech
 Buddy's location may be incorrect. Test this by asking the current time or
 weather, and change your location in your amazon profile accordingly.
 
+### Colour Tutorial Setup
+
+To set up the color skill kit that is provided to you on AWS, login to your
+account, select the Lambda program, and search for “color”. A color skill kit
+should appear. After selecting the skill, follow the steps that were provided to
+make the skill as the previous skill, “IAM”. Once you have completed the steps
+and filled in the required fields that are needed for the intents and the
+utterances; these can be found on [Sanjays GitHub
+page](https://github.com/Sanjay4966/Sanjay4966.github.io), the PDF are
+developer-amazon-com and developer-amazon-web.
+
+\pagebreak
+
 Conclusion
 ==========
+
+\pagebreak
 
 References
 ==========
